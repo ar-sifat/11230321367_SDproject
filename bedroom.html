@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ARS Interior Design - Bedroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.png" class="logo" alt="ARS Interior Design Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bedroom.html">Bedroom</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="kitchen.html">Kitchen</a></li>
+            <li><a href="backyard.html">Backyard</a></li>
+            <li>
+                <a href="#" class="cart-icon" onclick="toggleCart()">
+                    🛒 <span class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="cart-dropdown" id="cart-dropdown">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items">
+  
+        </div>
+        <div class="cart-footer">
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <section class="gallery-section">
+        <a href="index.html" class="back-home">← Back to Home</a>
+        <h2>Bedroom Designs</h2>
+        <div class="gallery-container" id="gallery-container">
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn">&times;</span>
+        <div class="lightbox-nav">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+        <img class="lightbox-content" id="lightbox-image">
+        <div class="image-counter" id="image-counter"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const category = 'bedroom';
+            const imageCount = 16;
+            initGallery(category, imageCount);
+        });
+    </script>
+</body>
+</html>
